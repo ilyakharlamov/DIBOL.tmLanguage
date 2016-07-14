@@ -12,7 +12,7 @@
 	<array>
 		<dict>
 			<key>match</key>
-			<string>(;|#).*$\n?</string>
+			<string>(;).*$\n?</string>
 			<key>name</key>
 			<string>comment.line.semicolon.cif</string>
 		</dict>

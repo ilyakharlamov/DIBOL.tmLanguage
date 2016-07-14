@@ -2,50 +2,69 @@
     "patterns": [
         {
             "name": "comment.line.semicolon.cif", 
-            "match": "(;|#).*$\\n?"
-        },
+            "match": "(;).*$\\n?"
+        }, 
         {
-            "name": "entity.name.function.dibol",
+            "name": "entity.name.function.dibol", 
             "match": "^(?i:[A-Za-z0-9_]+),"
-        },
+        }, 
         {
             "name": "keyword.control.dibol", 
             "match": "(?i:\\b(ACCEPT|ADDHANDLER|BEGIN|END|CALL|CASE|CLASS|ENDCLASS|CLEAR|CLOSE|COMMON|ENDCOMMON|DATA|DECR|DELETE|DETACH|DISPLAY|DO|DO|UNTIL|END|ENDPARAMS|ENUM|EXIT|EXITLOOP|EXITTRY|EXTERNA|FUNCTION|ENDEXTERNAL|FIND|FLUSH|FOR|DO|FOR|FROM|THRU|FOR|UNTIL|DO|FOREACH|FORMS|FRETURN|FUNCTION|ENDFUNCTION|GET|GETS|GLOBAL|ENDGLOBAL|GOTO|GROUP|ENDGROUP|IF|IF|THEN|ELSE|IMPORT|INCR|INIT|LITERAL|ENDLITERAL|LOCASE|LPQUE|MAIN|ENDMAIN|MERGE|METHOD|ENDMETHOD|MRETURN|NAMESPACE|ENDNAMESPACE|NEXTLOOP|NOP|OFFERROR|ONERROR|OPEN|PROC|END|PROPERTY|ENDPROPERTY|PURGE|PUT|PUTS|READ|READS|RECORD|ENDRECORD|RECV|REMOVEHANDLER|REPEAT|RETURN|SEND|SET|SLEEP|SORT|STOP|STORE|STRUCTURE|ENDSTRUCTURE|SUBROUTINE|ENDSUBROUTINE|THROW|TRY|CATCH|FINALLY|ENDTRY|UNLOCK|UPCASE|USING|USING|RANGE|WHILE|WRITE|WRITES|XCALL|XRETURN)(?!\\$)\\b)"
-        },
+        }, 
         {
-            "name": "support.function.dibol",
+            "name": "support.function.dibol", 
             "match": "(?i:^A|%ABS|ACCHR|ACESC|^ADDR|^ARG|^ARGA|^ARGDIM|^ARGN|^ARGNUM|^ARGTYPE|ASCII|ASCR5|ASTRST|AST|ASTSAV|%ATRIM|^B|BEGFL|%BIN|%BIT_IS_SET|%BKSTR|BREAK|BTOD|%CHAR|CHNOPN|%CHOPEN|CMDLN|%CNV_IP|%CNV_PI|COMPRESS|COPY|%CPUTIME|CPUTM|CREMBX|CVTIIV|CVTIZV|^D|DACHR|DAESC|DATA_DECRYPT|DATA_ENCRYPT|DATA_SALTIV|^DATATYPE|%DATE|%DATECOMPILED|%DATETIME|DBL$|DBL$DEVCLT|%DBL$EXECUTE_IMAGE_ROUTINE|DBL$SETKRF|DBL$SNDOPR|%DECML|^DEFINED|DELET|DELMBX|^DESCR|DFLAG|DTOB|EMPBUF|ENDFL|ENVRN|%ERLIN|%ERNUM|%ERR_TRACEBACK|ERRMOD|%ERROR|ERTXT|EXEC|EXITE|EXITERROR|^F|%FALSE|FATAL|FILL|FILNM|FLAGS|FORK|FREE|%FSTAT|FSTAT|FXSUBR|GETCM|GETDFN|GETFA|GETFNM|GETLOG|GETRFA|GLINE|GTPPN|%HEX|^I|%IMPLIED|INITPORT|%INSTR|%INT|%INTEGER|ISAMC|ISCLR|%ISINFO|%ISINFOA|ISKEY|ISSTS|JBNAM|%JBNO|%JPERIOD|%KEYVAL|KILL|%LEN|%LINE|LOCALIZE|^M|%MEM_PROC|MODNAME|MONEY|%NDATE|%NUMARGS|^O|%OCT|OPENELB|%OPTION|%PACKED|%PAINT|PAINT|PAK|PARSE|^PASSED|^PASSTHRU|POSRFA|PURGE|PUTCM|QSORT|R5ASC|RANDM|RCFLG|RCVID|%RDLEN|%RDTRM|%RECNUM|^REF|RENAM|%RFA|%RND|%ROUND|%RSIZE|RSTAT|RSTATD|%RTERM|RUNJB|%RVSTR|S_BLD|S_DETAB|S_MATCH|S_PARSE|S_WRAP|SDMS_SEL|SERIAL|%SET_PRIORITY_CLASS|SETCTL|SETDFN|SETLOG|SHELL|^SIZE|SORT|SPAWN|%STRING|STTY|%SUCCESS|%SYN_ATEXIT|%SYN_CHARTOSTR|%SYN_ESCAPE_HANDLE|%SYN_FREECHN|%SYN_GETDIR|%SYN_GETSTATE|SYN_REPORTEVENT|%SYN_SETDIR|%SYN_SETSTATE|%SYN_SYSERRTXT|%SYN_UNAME|%SYN_UNESCAPE_HANDLE|%SYN_XNAME|%SYSERR|%SYSID|TFLSH|TIME|%TIMEZONE|%TNMBR|TRACEBACK|%TRIM|%TRIMZ|%TRUE|%TRUNC|%TRUNCATE|TT_NAME_TO_NUMBER|TT_NUMBER_TO_NAME|TTBRDCST|TTCHAR|TTFLGS|TTMBX|%TTNAME|%TTSTS|UNPAK|%UNSIGNED|^VAL|^VARIANT|%VERSN|VMCMD|VMMSG|%VMS|%WAIT|%WKDAY|^X|%XADDR|XARGS|XSTAT|XSUBR|^XTRNL|%ZONED)"
-        },
+        }, 
         {
-            "match" : "(?<![A-Za-z0-9_])([0-9]+)",
-            "name" : "constant.numeric.dibol"
-        },
+            "name": "constant.numeric.dibol", 
+            "match": "(?<![A-Za-z0-9_])([0-9]+)"
+        }, 
         {
             "name": "keyword.operator.cif", 
             "match": "\\.(?i:=|EQ|NE|GT|LT|GE|LE|AND|OR)\\."
         }, 
-        {  "name": "keyword.operator.cif",
-           "match": "(\\*|/|\\+|-|=|<>|><|<|>|<=|>=|=<|=>|:|,|;|\\(|\\)|\\[|\\])"
-        },
+        {
+            "name": "keyword.operator.cif", 
+            "match": "(\\*|/|\\+|-|=|<>|><|<|>|<=|>=|=<|=>|:|,|;|\\(|\\)|\\[|\\])"
+        }, 
         {
             "name": "keyword.operator.dibol", 
             "match": "^&"
-        },
-        {  
-            "name": "keyword.control.untitled",
+        }, 
+        {
+            "name": "keyword.control.untitled", 
             "match": "(\\s*)(\\=)\\s*"
-        },
-        { "begin" : "\"",
-            "beginCaptures" : { "0" : { "name" : "punctuation.definition.string.begin.dibol" } },
-            "end" : "(\"|$)",
-            "endCaptures" : { "0" : { "name" : "punctuation.definition.string.end.dibol" } },
-            "name" : "string.quoted.double.dibol"
-        },
-        { "begin" : "'",
-            "beginCaptures" : { "0" : { "name" : "punctuation.definition.string.begin.dibol" } },
-            "end" : "('|$)",
-            "endCaptures" : { "0" : { "name" : "punctuation.definition.string.end.dibol" } },
-            "name" : "string.quoted.single.dibol"
+        }, 
+        {
+            "endCaptures": {
+                "0": {
+                    "name": "punctuation.definition.string.end.dibol"
+                }
+            }, 
+            "begin": "\"", 
+            "end": "(\"|$)", 
+            "name": "string.quoted.double.dibol", 
+            "beginCaptures": {
+                "0": {
+                    "name": "punctuation.definition.string.begin.dibol"
+                }
+            }
+        }, 
+        {
+            "endCaptures": {
+                "0": {
+                    "name": "punctuation.definition.string.end.dibol"
+                }
+            }, 
+            "begin": "'", 
+            "end": "('|$)", 
+            "name": "string.quoted.single.dibol", 
+            "beginCaptures": {
+                "0": {
+                    "name": "punctuation.definition.string.begin.dibol"
+                }
+            }
         }
     ], 
     "uuid": "53ca6d42-2cd3-49aa-ab4c-e9d3149c2eaa", 
